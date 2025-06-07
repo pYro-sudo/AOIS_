@@ -27,16 +27,16 @@ public class LogicMinimizerApp {
 
         Minimizer minimizer = new Minimizer();
 
-        KarnaughMinimizer1 karnaughMinimizer1 = new KarnaughMinimizer1();
+        KarnaughMinimizer karnaughMinimizer = new KarnaughMinimizer();
 
         IOSystem.printSDNFCalculatingMethod(minimizer.minimizeSDNFByCalculating(sdnf));
         IOSystem.printSDNFTableCalculatingMethod(minimizer.minimizeSDNFByTableAndCalculating(sdnf));
-        IOSystem.printSDNFTableMethod(karnaughMinimizer1.minimizeSDNFByKarnaugh(sdnf));
+        IOSystem.printSDNFTableMethod(karnaughMinimizer.minimizeSDNFByKarnaugh(sdnf));
 
 
         IOSystem.printSKNFCalculatingMethod(minimizer.minimizeSKNFByCalculating(sknf));
         IOSystem.printSKNFTableCalculatingMethod(minimizer.minimizeSKNFByTableAndCalculating(sknf));
-        IOSystem.printSKNFTableMethod(karnaughMinimizer1.minimizeSKNFByKarnaugh(sknf));
+        IOSystem.printSKNFTableMethod(karnaughMinimizer.minimizeSKNFByKarnaugh(sknf));
 
     }
 }
